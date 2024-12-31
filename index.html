@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet-Sun Gaming Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="Velvet_Sun.png" alt="Velvet-Sun Logo" class="h-12 w-auto">
+                    <span class="ml-3 text-2xl font-bold text-yellow-500">Velvet-Sun</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-yellow-500 transition">Home</a>
+                    <a href="#" class="text-white hover:text-yellow-500 transition">Products</a>
+                    <a href="#" class="text-white hover:text-yellow-500 transition">Services</a>
+                    <a href="#" class="text-white hover:text-yellow-500 transition">About</a>
+                    <a href="#" class="text-white hover:text-yellow-500 transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative h-screen">
+        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e" alt="Gaming Setup" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40">
+            <div class="container mx-auto px-6 h-full flex items-center">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Your Go-To Store for Gaming Gear!</h1>
+                    <p class="text-xl text-gray-300 mb-8">Discover the ultimate gaming experience with our premium selection of PCs and accessories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-white text-center mb-16">Product Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
+                    <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c" alt="Gaming PC" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Gaming PCs</h3>
+                        <p class="text-gray-400">Custom-built powerhouses for ultimate performance</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
+                    <img src="Accessories.webp" alt="Accessories" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Accessories</h3>
+                        <p class="text-gray-400">Premium peripherals for your setup</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
+                    <img src="Video_Games.png" alt="Video Games" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Video Games</h3>
+                        <p class="text-gray-400">Latest titles across all platforms</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088" alt="Collectibles" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Collectibles</h3>
+                        <p class="text-gray-400">Rare finds and limited editions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-white text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Featured Products</h2>
+            <div class="flex justify-center space-x-6 mb-16">
+                <button onclick="showCategory('pcbuilds')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    PC Builds
+                </button>
+                <button onclick="showCategory('mice')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Mouses
+                </button>
+                <button onclick="showCategory('keyboards')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Keyboards
+                </button>
+                <button onclick="showCategory('screens')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Screens
+                </button>
+                <button onclick="showCategory('chairs')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    Chairs
+                </button>
+            </div>
+            
+            <div id="pcbuilds" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative mb-8 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7" alt="Gaming Desktop" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">NEW</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Ultra Gaming Desktop</h3>
+                    <div class="flex items-center justify-between mb-6">
+                        <p class="text-yellow-400 text-3xl font-bold">$2,499</p>
+                        <span class="text-gray-400 line-through">$2,799</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mice" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative mb-8 rounded-xl overflow-hidden">
+                        <img src="Mouse.webp" alt="Gaming Mouse" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">SALE</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">HyperX Pulsefire Haste</h3>
+                    <div class="flex items-center justify-between mb-6">
+                        <p class="text-yellow-400 text-3xl font-bold">$49.99</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="keyboards" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative mb-8 rounded-xl overflow-hidden">
+                        <img src="Bloody.jpg" alt="Gaming Keyboard" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">HOT</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Bloody s87</h3>
+                    <div class="flex items-center justify-between mb-6">
+                        <p class="text-yellow-400 text-3xl font-bold">65$</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="screens" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative mb-8 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1527219525722-f9767a7f2884" alt="Gaming Monitor" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">BEST</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">144Hz Gaming Monitor</h3>
+                    <div class="flex items-center justify-between mb-6">
+                        <p class="text-yellow-400 text-3xl font-bold">$399</p>
+                        <span class="text-gray-400 line-through">$499</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chairs" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="relative mb-8 rounded-xl overflow-hidden">
+                        <img src="Chair.webp" alt="Gaming Chair" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">NEW</div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Gaming Chair</h3>
+                    <div class="flex items-center justify-between mb-6">
+                        <p class="text-yellow-400 text-3xl font-bold">$299</p>
+                        <span class="text-gray-400 line-through">$399</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">About Us</h4>
+                    <p>Your premier destination for gaming gear and accessories.</p>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Contact</h4>
+                    <p>Email: info@velvet-sun.com</p>
+                    <p>Phone: +961 70 703 305</p>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/velvetsunlb/" class="hover:text-yellow-500 transition">Facebook</a>
+                        <a href="https://www.instagram.com/velvetsunlb/" class="hover:text-yellow-500 transition">Instagram</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Legal</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#" class="hover:text-yellow-500 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-yellow-500 transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Velvet-Sun. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showCategory(categoryId) {
+            // Hide all categories
+            document.querySelectorAll('.category-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show selected category
+            document.getElementById(categoryId).classList.remove('hidden');
+        }
+
+        // Show PC builds by default
+        showCategory('pcbuilds');
+    </script>
+</body>
+</html>
