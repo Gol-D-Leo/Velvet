@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velvet-Sun Gaming Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
     <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <img src="Velvet_Sun.png" alt="Velvet-Sun Logo" class="h-12 w-auto">
-                    <span class="ml-3 text-2xl font-bold text-yellow-500">Velvet-Sun</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-white hover:text-yellow-500 transition">Home</a>
-                    <a href="#" class="text-white hover:text-yellow-500 transition">Products</a>
-                    <a href="#" class="text-white hover:text-yellow-500 transition">Services</a>
-                    <a href="#" class="text-white hover:text-yellow-500 transition">About</a>
-                    <a href="#" class="text-white hover:text-yellow-500 transition">Contact</a>
-                </div>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="Images/Velvet_Sun.png" alt="Velvet-Sun Logo" class="h-12 w-auto">
+                <span class="ml-3 text-2xl font-bold text-yellow-500">Velvet-Sun</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-500 transition">Home</a>
+                <a href="#new" class="hover:text-yellow-500 transition">Newly Released</a>
+                <a href="#products" class="hover:text-yellow-500 transition">Products</a>
+                <a href="#contact" class="hover:text-yellow-500 transition">Contact</a>
             </div>
         </nav>
     </header>
-
-    <section class="relative h-screen">
-        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e" alt="Gaming Setup" class="absolute inset-0 w-full h-full object-cover">
+    <section id="home" class="relative h-screen">
+        <img src="Images/Setup.webp" alt="Gaming Setup" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40">
             <div class="container mx-auto px-6 h-full flex items-center">
                 <div class="max-w-2xl">
@@ -37,145 +37,161 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gray-900">
+    <!-- Newly Released Section -->
+    <section id="new" class="py-12 bg-gradient-to-r from-black to-gray-800">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-white text-center mb-16">Product Categories</h2>
+            <h2 class="text-4xl font-bold mb-6 text-yellow-400">Newly Released</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition">
+                    <img src="Images/Setup2.webp" alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Setup</h3>
+                        <p class="text-gray-400">Latest gaming setup at $999</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section id="products" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Product Categories</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
-                    <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c" alt="Gaming PC" class="w-full h-48 object-cover">
+                <button onclick="openCategory('videogames')" class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition">
+                    <img src="Images/Video_Games.png" alt="Video Games" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Gaming PCs</h3>
-                        <p class="text-gray-400">Custom-built powerhouses for ultimate performance</p>
+                        <h3 class="text-xl font-bold">Video Games</h3>
+                        <p class="text-gray-400">Latest and classic titles</p>
                     </div>
-                </div>
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
-                    <img src="Accessories.webp" alt="Accessories" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Accessories</h3>
-                        <p class="text-gray-400">Premium peripherals for your setup</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
-                    <img src="Video_Games.png" alt="Video Games" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Video Games</h3>
-                        <p class="text-gray-400">Latest titles across all platforms</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition">
-                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088" alt="Collectibles" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Collectibles</h3>
-                        <p class="text-gray-400">Rare finds and limited editions</p>
-                    </div>
-                </div>
+                </button>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-gradient-to-b from-black via-gray-900 to-black">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-white text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Featured Products</h2>
-            <div class="flex justify-center space-x-6 mb-16">
-                <button onclick="showCategory('pcbuilds')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
-                    PC Builds
-                </button>
-                <button onclick="showCategory('mice')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
-                    Mouses
-                </button>
-                <button onclick="showCategory('keyboards')" class="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:scale-105 shadow-lg">
-                    Keyboards
-                </button>
-            </div>
-            
-            <div id="pcbuilds" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative mb-8 rounded-xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7" alt="Gaming Desktop" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
-                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">NEW</div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Ultra Gaming Desktop</h3>
-                    <div class="flex items-center justify-between mb-6">
-                        <p class="text-yellow-400 text-3xl font-bold">$2,499</p>
-                        <span class="text-gray-400 line-through">$2,799</span>
-                    </div>
-                </div>
-            </div>
-
-            <div id="mice" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative mb-8 rounded-xl overflow-hidden">
-                        <img src="Mouse.webp" alt="Gaming Mouse" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
-                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">SALE</div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">HyperX Pulsefire Haste</h3>
-                    <div class="flex items-center justify-between mb-6">
-                        <p class="text-yellow-400 text-3xl font-bold">$49.99</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="keyboards" class="category-content hidden grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="relative mb-8 rounded-xl overflow-hidden">
-                        <img src="Bloody.jpg" alt="Gaming Keyboard" class="w-full h-80 object-cover transition duration-300 hover:opacity-75">
-                        <div class="absolute top-4 right-4 bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">HOT</div>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Bloody s87</h3>
-                    <div class="flex items-center justify-between mb-6">
-                        <p class="text-yellow-400 text-3xl font-bold">65$</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Modal -->
+    <div id="category-modal" class="hidden fixed inset-0 bg-black/90 z-50">
+        <button onclick="closeCategory()" class="absolute top-4 left-4 bg-yellow-500 px-4 py-2 rounded">X</button>
+        <div id="category-content" class="container mx-auto px-6 py-12">
+            <!-- Content loaded dynamically -->
         </div>
-    </section>
+    </div>
 
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-4">About Us</h4>
-                    <p>Your premier destination for gaming gear and accessories.</p>
-                </div>
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-4">Contact</h4>
-                    <p>Email: info@velvet-sun.com</p>
-                    <p>Phone: +961 70 703 305</p>
-                </div>
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/velvetsunlb/" class="hover:text-yellow-500 transition">Facebook</a>
-                        <a href="https://www.instagram.com/velvetsunlb/" class="hover:text-yellow-500 transition">Instagram</a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-4">Legal</h4>
-                    <div class="flex flex-col space-y-2">
-                        <a href="#" class="hover:text-yellow-500 transition">Privacy Policy</a>
-                        <a href="#" class="hover:text-yellow-500 transition">Terms of Service</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p>&copy; 2024 Velvet-Sun. All rights reserved.</p>
+    <!-- Contact Section -->
+    <footer id="contact" class="py-12 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/" target="_blank" class="hover:text-yellow-500 transition">
+                    <img src="Images/Insta.png" alt="Instagram Logo" class="h-10 w-10">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" class="hover:text-yellow-500 transition">
+                    <img src="Images/Facebook.png" alt="Facebook Logo" class="h-10 w-10">
+                </a>
+                <a href="https://wa.me/123456789" target="_blank" class="hover:text-yellow-500 transition">
+                    <img src="Images/Whatsapp.webp" alt="WhatsApp Logo" class="h-10 w-10">
+                </a>
             </div>
         </div>
     </footer>
 
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="fixed bottom-0 inset-x-0 bg-black/90 backdrop-blur-sm md:hidden">
+        <div class="flex justify-around py-4">
+            <a href="#home" class="text-white hover:text-yellow-500 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-9-9v18" />
+                </svg>
+                <span class="text-xs">Home</span>
+            </a>
+            <a href="#new" class="text-white hover:text-yellow-500 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.55-4.55M10 5.9l4.55 4.55M21 12h-4m0 0H3m18 0v8m0-8V4" />
+                </svg>
+                <span class="text-xs">New</span>
+            </a>
+            <a href="#products" class="text-white hover:text-yellow-500 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m4-4H8" />
+                </svg>
+                <span class="text-xs">Products</span>
+            </a>
+            <a href="#contact" class="text-white hover:text-yellow-500 flex flex-col items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8h18m-6 0H3m18 8h-6" />
+                </svg>
+                <span class="text-xs">Contact</span>
+            </a>
+        </div>
+    </div>
+
     <script>
-        function showCategory(categoryId) {
-            // Hide all categories
-            document.querySelectorAll('.category-content').forEach(content => {
-                content.classList.add('hidden');
-            });
-            
-            // Show selected category
-            document.getElementById(categoryId).classList.remove('hidden');
+        const modal = document.getElementById('category-modal');
+        const content = document.getElementById('category-content');
+
+        function openCategory(category) {
+            modal.classList.remove('hidden');
+            if (category === 'videogames') {
+                content.innerHTML = `
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Video Games</h2>
+                        <div class="flex justify-center mb-4">
+                            <button onclick="switchGames('hotDeals')" class="bg-yellow-500 px-4 py-2 rounded mx-2">Hot Deals</button>
+                            <button onclick="switchGames('newReleases')" class="bg-yellow-500 px-4 py-2 rounded mx-2">New Releases</button>
+                            <button onclick="switchGames('usedGames')" class="bg-yellow-500 px-4 py-2 rounded mx-2">Used Games</button>
+                        </div>
+                        <div id="game-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto max-h-96">
+                            ${generateGameCards('hotDeals')}
+                        </div>
+                    </div>
+                `;
+            }
         }
 
-        // Show PC builds by default
-        showCategory('pcbuilds');
+        function switchGames(type) {
+            const gameList = document.getElementById('game-list');
+            gameList.innerHTML = generateGameCards(type);
+        }
+
+        function generateGameCards(type) {
+            let items = [];
+            if (type === 'hotDeals') {
+                items = [
+                    { name: "Dark Souls 1", price: "$15", img: "https://assets-prd.ignimgs.com/2021/12/07/darksouls-org-1638838962208.png" },
+                    { name: "Bloodborne", price: "$19.99", img: "https://cdn.cloudflare.steamstatic.com/steam/apps/885870/header.jpg" },
+                    { name: "Resident Evil 4", price: "$25", img: "https://cdn.akamai.steamstatic.com/steam/apps/2050650/header.jpg" }
+                ];
+            } else if (type === 'newReleases') {
+                items = [
+                    { name: "Elden Ring", price: "$59.99", img: "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" },
+                    { name: "Nioh 2", price: "$39.99", img: "https://cdn.cloudflare.steamstatic.com/steam/apps/1325200/header.jpg" }
+                ];
+            } else if (type === 'usedGames') {
+                items = [
+                    { name: "The Last of Us Part II", price: "$14.99", img: "https://cdn.cloudflare.steamstatic.com/steam/apps/1246470/header.jpg" },
+                    { name: "Game 6", price: "$14.99", img: "https://via.placeholder.com/300x200" }
+                ];
+            }
+
+            return items
+                .map(
+                    item => `
+                    <div class="bg-gray-800 rounded-xl overflow-hidden">
+                        <img src="${item.img}" alt="${item.name}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold">${item.name}</h3>
+                            <p class="text-gray-400">${item.price}</p>
+                        </div>
+                    </div>
+                `
+                )
+                .join('');
+        }
+
+        function closeCategory() {
+            modal.classList.add('hidden');
+        }
     </script>
 </body>
+
 </html>
